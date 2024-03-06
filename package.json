@@ -33,7 +33,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"build:lib": "rimraf lib && rollup -c",
-		"build:local": "npm run build:lib && npm pack",
+		"build:local": "yarn build:lib && npm pack",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
@@ -41,7 +41,7 @@
 		"test-storybook": "test-storybook",
 		"chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}  --force-rebuild",
 		"chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
-		"chromatic": "npm run chromatic:full",
+		"chromatic": "yarn chromatic:full",
 		"bump": "npm version patch && git push --follow-tags"
 	},
 	"dependencies": {
@@ -56,6 +56,7 @@
 	"license": "UNLICENSED",
 	"devDependencies": {
 		"@emotion/css": "^11.11.2",
+		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.0",
 		"@rollup/plugin-alias": "^5.1.0",
 		"@rollup/plugin-commonjs": "^25.0.7",
@@ -96,6 +97,8 @@
 		"postcss": "^8.4.35",
 		"postcss-nested": "^6.0.1",
 		"punycode": "^1.4.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"rimraf": "^5.0.5",
 		"rollup": "^4.12.0",
 		"rollup-plugin-dts": "^6.1.0",
@@ -117,5 +120,8 @@
 		"punycode": "^1.4.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0"
+	},
+	"resolutions": {
+		"jackspeak": "2.1.1"
 	}
 }
